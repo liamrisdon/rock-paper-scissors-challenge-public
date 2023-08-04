@@ -39,6 +39,45 @@ Hints on functionality
 - the game will choose a random option
 - a winner will be declared and an option to play again
 
+------------------------------------------------------------------------------
+
+So, to be able to play the user must be able to:
+- Input name
+- See all moves
+- Select a move
+- Matched against a random (bot) move
+- See the outcome of the round
+
+| Object      | Properties         | Messages         | Returns     |
+| ----------- | ------------------ | ---------------- | ----------- |
+| player      | name @String       | getName()        | @String     |
+|             |                    | setName()        |             |
+|             | move @String       | getMove()        | @String     |
+|             |                    | setMove()        |             |
+| bot         |                    | setRandomMove()  |             |
+| game        |                    | setUpGame()      |             |
+|             |                    | calculateWinner()| @String     |
+
+player tests:
+- A new instance of player can be created
+- Player returns the correct name
+- Player should be able to set the correct move
+
+bot tests:
+- Bot can set a random move
+
+game tests:
+- should be able to set up a new game
+- Should be able to calculate the winner of a game
+- Should be able to calculate a draw
+
+app tests:
+- Test post requests
+- Test get requests
+
+
+-------------------------------------------------------------------------------
+
 ## Basic Rules
 
 - Rock beats Scissors
