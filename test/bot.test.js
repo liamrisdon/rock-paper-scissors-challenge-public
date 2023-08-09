@@ -15,7 +15,15 @@ describe("Bot tests", () => {
 
     it('should set a random move for the bot', () => {
         const handMoves = ["rock", "paper", "scissors"];
-        expect(handMoves).to.include(newBot.setRandomMove());
+        expect(handMoves).to.include(newBot.createRandomMove());
+
+    })
+
+    it('should return the correct move when get move is called on bot', () => {
+
+        let expected = newBot.createRandomMove();
+        console.log(`expected: ${expected}`);
+        expect(newBot.getMove()).to.equal(expected);
 
     })
 })

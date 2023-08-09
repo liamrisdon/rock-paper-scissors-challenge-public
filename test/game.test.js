@@ -20,7 +20,7 @@ describe("game tests", () => {
         }
 
         const newBot = {
-            setRandomMove() { return "rock" }
+            createRandomMove() { return "rock" }
         }
 
         newGame = new Game(newPlayer, newBot);
