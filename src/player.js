@@ -1,22 +1,22 @@
 class Player {
 
-    #name = " ";
-    #move = " "
+    name = " ";
+    move = " "
 
     constructor(name) {
-        this.#name = name;
+        this.name = name;
     }
 
     getName() {
-        return this.#name;
+        return this.name;
     }
 
     getMove() {
-        return this.#move;
+        return this.move;
     }
 
     setMove(move) {
-        this.#move = move;
+        this.move = move;
     }
 
 }

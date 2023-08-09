@@ -1,8 +1,5 @@
 class Game {
 
-    #player
-    #bot
-
     constructor(player, bot) {
         this.player = player;
         this.bot = bot;
