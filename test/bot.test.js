@@ -13,16 +13,25 @@ describe("Bot tests", () => {
         expect(newBot).instanceOf(Bot);
     })
 
+
+    it('should return the correct name for the bot', () => {
+
+        expect(newBot.getName()).to.equal("Bot");
+
+    })
+
+
     it('should set a random move for the bot', () => {
+
         const handMoves = ["rock", "paper", "scissors"];
         expect(handMoves).to.include(newBot.createRandomMove());
 
     })
 
+
     it('should return the correct move when get move is called on bot', () => {
 
         let expected = newBot.createRandomMove();
-        console.log(`expected: ${expected}`);
         expect(newBot.getMove()).to.equal(expected);
 
     })

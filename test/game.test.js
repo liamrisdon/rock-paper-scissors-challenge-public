@@ -20,13 +20,33 @@ describe("game tests", () => {
         }
 
         const newBot = {
-            createRandomMove() { return "rock" }
+            getMove() { return "rock" },
+            getName() { return "newBot" }
         }
 
         newGame = new Game(newPlayer, newBot);
 
         const result = newGame.calculateWinner();
         expect(result).to.equal("newPlayer wins!");
+
+    })
+
+    it('should allow the bot to win', () => {
+
+        const newPlayer = {
+            getMove() { return "paper" },
+            getName() { return "newPlayer" }
+        }
+
+        const newBot = {
+            getMove() { return "scissors" },
+            getName() { return "Bot" }
+        }
+
+        newGame = new Game(newPlayer, newBot);
+
+        const result = newGame.calculateWinner();
+        expect(result).to.equal("Bot wins!");
 
     })
 
@@ -37,7 +57,7 @@ describe("game tests", () => {
         }
 
         const newBot = {
-            setRandomMove() { return "paper" },
+            getMove() { return "paper" },
         }
 
         newGame = new Game(newPlayer, newBot);

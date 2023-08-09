@@ -5,13 +5,15 @@
   "main": "App.js",
   "type": "module",
   "scripts": {
-    "build": "nodemon app.js",
-    "test": "mocha --timeout 10000 --exit",
-    "start": "NODE_ENV=dev nodemon app.js"
+    "start": "NODE_ENV=dev nodemon app.js",
+    "build": "NODE_ENV=dev && npm install && nodemon app",
+    "test": "NODE_ENV=test mocha --timeout=10000 --exit",
+    "c8-coverage": "NODE_ENV=test c8 npm test"
   },
   "author": "Liam Risdon",
   "license": "ISC",
   "devDependencies": {
+    "c8": "^8.0.1",
     "chai": "^4.3.7",
     "mocha": "^10.2.0"
   },
