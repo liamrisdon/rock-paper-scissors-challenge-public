@@ -11,7 +11,6 @@ router.post('/', (req, res) => {
     const game = new Game(currentPlayer, bot)
     req.app.locals.game = game
 
-
     res.redirect("/game");
 
 });
@@ -19,13 +18,19 @@ router.post('/', (req, res) => {
 router.get('/', (req, res) => {
 
     const player = req.app.locals.game;
+    const name = req.app.locals.game.player.name;
 
     res.render("game", {
+        name: name,
         player: player.player,
         bot: player.bot
     })
 
 })
+
+
+
+
 
 
 export { router as gameRouter };

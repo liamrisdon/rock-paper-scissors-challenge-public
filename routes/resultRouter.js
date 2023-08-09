@@ -8,22 +8,16 @@ router.post("/", (req, res) => {
     const choice = req.body.choice
     game.player.setMove(choice);
     game.bot.createRandomMove();
-
+    const botMove = game.bot.getMove();
 
     const result = game.calculateWinner();
     req.app.locals.result = result;
-
-    const botMove = game.bot.getMove();
-
-    console.log(botMove);
 
     res.render("result", {
         choice: choice,
         result: result,
         botMove: botMove
     })
-
-    // res.redirect("/result");
 
 });
 
