@@ -6,11 +6,11 @@ class Game {
     }
 
     calculateWinner() {
-        const handMoves = { rock: "scissors", scissors: "paper", paper: "rock" }
-        if (handMoves[this.player.getMove()] === this.bot.getMove()) {
+        const handMoves = { rock: ["scissors", "lizard"], scissors: ["paper", "lizard"], paper: ["rock", "Spock"], lizard: ["Spock", "paper"], Spock: ["scissors", "rock"] }
+        if (handMoves[this.player.getMove()].includes(this.bot.getMove())) {
             return `${this.player.getName()} wins!`;
         }
-        if (handMoves[this.bot.getMove()] === this.player.getMove()) {
+        if (handMoves[this.bot.getMove()].includes(this.player.getMove())) {
             return `${this.bot.getName()} wins!`;
         }
         return "It is a draw!";

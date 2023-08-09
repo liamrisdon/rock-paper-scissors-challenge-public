@@ -66,4 +66,22 @@ describe("game tests", () => {
         expect(result).to.equal("It is a draw!");
     })
 
+    it('should allow for spock to vaporize rock', () => {
+
+        const newPlayer = {
+            getMove() { return "Spock" },
+            getName() { return "newPlayer" }
+        }
+
+        const newBot = {
+            getMove() { return "rock" }
+        }
+
+        newGame = new Game(newPlayer, newBot);
+
+        const result = newGame.calculateWinner();
+        expect(result).to.equal("newPlayer wins!");
+
+    })
+
 })
