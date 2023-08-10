@@ -8,7 +8,7 @@ describe("game tests", () => {
     it('should set up a new game', () => {
         newGame = new Game();
         expect(newGame).instanceOf(Game);
-    })
+    });
 
 
 
@@ -29,7 +29,7 @@ describe("game tests", () => {
         const result = newGame.calculateWinner();
         expect(result).to.equal("newPlayer wins!");
 
-    })
+    });
 
     it('should allow the bot to win', () => {
 
@@ -48,7 +48,7 @@ describe("game tests", () => {
         const result = newGame.calculateWinner();
         expect(result).to.equal("Bot wins!");
 
-    })
+    });
 
     it('should return a draw if moves are the same', () => {
 
@@ -64,7 +64,7 @@ describe("game tests", () => {
 
         const result = newGame.calculateWinner();
         expect(result).to.equal("It is a draw!");
-    })
+    });
 
     it('should allow for spock to vaporize rock', () => {
 
@@ -82,6 +82,6 @@ describe("game tests", () => {
         const result = newGame.calculateWinner();
         expect(result).to.equal("newPlayer wins!");
 
-    })
+    });
 
-})
+});

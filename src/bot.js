@@ -1,7 +1,7 @@
 class Bot {
 
-    name = "Bot"
-    move = " "
+    name = "Bot";
+    move = " ";
 
     createRandomMove() {
         const moves = ["rock", "paper", "scissors"];

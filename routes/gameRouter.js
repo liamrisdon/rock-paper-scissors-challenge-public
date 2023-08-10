@@ -7,9 +7,9 @@ import Bot from "../src/bot.js";
 router.post('/', (req, res) => {
 
     const currentPlayer = new Player(req.body.player);
-    const bot = new Bot()
-    const game = new Game(currentPlayer, bot)
-    req.app.locals.game = game
+    const bot = new Bot();
+    const game = new Game(currentPlayer, bot);
+    req.app.locals.game = game;
 
     res.redirect("/game");
 
@@ -24,9 +24,9 @@ router.get('/', (req, res) => {
         name: name,
         player: player.player,
         bot: player.bot
-    })
+    });
 
-})
+});
 
 
 

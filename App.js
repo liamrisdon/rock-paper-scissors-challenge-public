@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import bodyParser from "body-parser";
 
 const app = express();
-dotenv.config({ path: `.env.${process.env.NODE_ENV}` })
+dotenv.config({ path: `.env.${process.env.NODE_ENV}` });
 const port = process.env.PORT;
 
 import { indexRouter } from "./routes/indexRouter.js";

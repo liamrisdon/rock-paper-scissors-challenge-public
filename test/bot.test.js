@@ -7,18 +7,18 @@ describe("Bot tests", () => {
 
     beforeEach(() => {
         newBot = new Bot();
-    })
+    });
 
     it('should create a new instance of a bot', () => {
         expect(newBot).instanceOf(Bot);
-    })
+    });
 
 
     it('should return the correct name for the bot', () => {
 
         expect(newBot.getName()).to.equal("Bot");
 
-    })
+    });
 
 
     it('should set a random move for the bot', () => {
@@ -26,7 +26,7 @@ describe("Bot tests", () => {
         const handMoves = ["rock", "paper", "scissors"];
         expect(handMoves).to.include(newBot.createRandomMove());
 
-    })
+    });
 
 
     it('should return the correct move when get move is called on bot', () => {
@@ -34,5 +34,5 @@ describe("Bot tests", () => {
         let expected = newBot.createRandomMove();
         expect(newBot.getMove()).to.equal(expected);
 
-    })
-})
+    });
+});

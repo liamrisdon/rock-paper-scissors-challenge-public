@@ -1,24 +1,17 @@
 class Player {
 
     name = " ";
-    move = " "
+    move = " ";
 
     constructor(name) {
         this.name = name;
     }
 
-    getName() {
-        return this.name;
-    }
+    getName() { return this.name; }
 
-    getMove() {
-        return this.move;
-    }
+    getMove() { return this.move; }
 
-    setMove(move) {
-        this.move = move;
-    }
-
+    setMove(move) { this.move = move; }
 }
 
 export default Player;

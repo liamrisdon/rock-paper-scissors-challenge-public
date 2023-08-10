@@ -3,7 +3,7 @@ const router = express.Router();
 
 router.post("/", (req, res) => {
 
-    const game = req.app.locals.game
+    const game = req.app.locals.game;
 
     const choice = req.body.choice
     game.player.setMove(choice);
@@ -17,7 +17,7 @@ router.post("/", (req, res) => {
         choice: choice,
         result: result,
         botMove: botMove
-    })
+    });
 
 });
 
