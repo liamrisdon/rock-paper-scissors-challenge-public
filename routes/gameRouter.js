@@ -18,7 +18,7 @@ router.post('/', (req, res) => {
 router.get('/', (req, res) => {
 
     const player = req.app.locals.game;
-    const name = req.app.locals.game.player.name;
+    const name = req.app.locals.game.player.getName();
 
     res.render("game", {
         name: name,
