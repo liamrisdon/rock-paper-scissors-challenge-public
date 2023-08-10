@@ -13,7 +13,7 @@ import { resultRouter } from "./routes/resultRouter.js";
 
 app.set("view engine", "ejs");
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/", indexRouter);
 app.use("/game", gameRouter);
 app.use("/result", resultRouter);
